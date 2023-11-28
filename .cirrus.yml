@@ -4,6 +4,7 @@ task:
     FOO: x
   echo_script:
     set -x
+    echo "foo"
     echo $CIRRUS_OIDC_TOKEŃ
   #archive_artifacts:
     #store: always
