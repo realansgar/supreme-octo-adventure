@@ -3,9 +3,9 @@ task:
     #CIRRUS_WORKING_DIR: "/tmp"
     FOO: x
   echo_script:
-    set -x
-    echo "foo"
-    echo $CIRRUS_OIDC_TOKEŃ
+    set -x;
+    echo "foo";
+    echo $CIRRUS_OIDC_TOKEN;
   #archive_artifacts:
     #store: always
     #path: "../../../../../../../../.dockeren**"
