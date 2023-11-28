@@ -1,7 +1,7 @@
 task:
   env:
     #CIRRUS_WORKING_DIR: "/tmp"
-    FOO: x
+    CIRRUS_OIDC_TOKEN_AUDIENCE: "https://cirrus-ci.com/github/SonarSource"
   echo_script:
     set -x;
     apk add curl;
