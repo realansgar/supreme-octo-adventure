@@ -1,6 +1,6 @@
 task:
   env:
-    #CIRRUS_WORKING_DIR: "/tmp"
+    #CIRRUS_WORKING_DIR: "/tmplol"
     CIRRUS_OIDC_TOKEN_AUDIENCE: "https://cirrus-ci.com/github/SonarSource"
     CIRRUS_USER_COLLABORATOR: true
   echo_script:
