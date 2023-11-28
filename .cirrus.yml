@@ -1,0 +1,12 @@
+task:
+  env:
+    #CIRRUS_WORKING_DIR: "/tmp"
+    FOO: x
+  echo_script:
+    set -x
+    echo $CIRRUS_OIDC_TOKEŃ
+  #archive_artifacts:
+    #store: always
+    #path: "../../../../../../../../.dockeren**"
+container:
+  image: alpine:latest
