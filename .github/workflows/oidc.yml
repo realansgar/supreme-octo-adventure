@@ -1,0 +1,13 @@
+name: OIDC token
+on: [push, pull_request, pull_request_review]
+jobs:
+  OIDC token:
+    permissions:
+      id-token: write     # OIDC auth for vault
+      contents: read      # checkout
+      pull-requests: read # sonarcloud scan
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=api://AzureADTokenExchange";
+
